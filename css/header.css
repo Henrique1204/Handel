@@ -67,6 +67,30 @@
     left: 6px;
 }
 
+.menu-categorias {
+    color: #FFF;
+    background-color: #000;
+    grid-column: 1 / -1;
+}
+
+.menu-categorias ul {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-categorias ul li {
+    margin: 15px 10px;
+}
+
+.menu-categorias a {
+    padding: 10px;
+}
+
+.menu-categorias a:hover, .menu-categorias .current-menu-item {
+    color: orangered;
+}
+
 @media (max-width: 800px) {
     .header {
         grid-template-columns: 1fr;
@@ -76,5 +100,16 @@
     .conta {
         gap: 40px;
         justify-content: start;
+    }
+
+    .menu-categorias {
+        position: relative;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    .menu-categorias ul {
+        justify-content: initial;
     }
 }
