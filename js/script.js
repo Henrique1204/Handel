@@ -1,0 +1,1 @@
+const slide = new Slide(".slide", ".slide-wrapper").init();

@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JS -->
+    <script src="<?= get_stylesheet_directory_uri(); ?>/js/slide.js" defer></script>
+    <script src="<?= get_stylesheet_directory_uri(); ?>/js/script.js" defer></script>
     <title><?php bloginfo("name"); wp_title('|'); ?></title>
     <!-- WP Head -->
     <?php wp_head(); ?>
