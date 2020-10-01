@@ -1,0 +1,80 @@
+.header {
+    padding: 0 20px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px, auto);
+    gap: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.busca form {
+    display: grid;
+}
+
+.busca #s {
+    padding: 12px 50px 12px 20px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    font-size: 1.125rem;
+    grid-area: 1/1;
+}
+
+.busca #searchbutton {
+    width: 50px;
+    border: none;
+    text-indent: -100px;
+    grid-area: 1/1;
+    justify-self: end;
+    overflow: hidden;
+    background: transparent url("../img/icons/search.svg") no-repeat center;
+    cursor: pointer;
+}
+
+.conta {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+.conta .minha-conta, .conta .carrinho {
+    padding: 5px 0px 5px 34px;
+    background: no-repeat center left;
+}
+
+.conta .carrinho {
+    background-image: url("../img/icons/cart.svg");
+    position: relative;
+}
+
+.conta .minha-conta {
+    background-image: url("../img/icons/user.svg");
+}
+
+.carrinho-count {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #FFF;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 6px;
+}
+
+@media (max-width: 800px) {
+    .header {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .conta {
+        gap: 40px;
+        justify-content: start;
+    }
+}
