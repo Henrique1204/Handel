@@ -34,3 +34,22 @@ function handel_loop_shop_per_page() {
 }
 
 add_filter('loop_shop_per_page', 'handel_loop_shop_per_page');
+
+function handel_listar_produtos($produtos) { ?>
+    <ul class="lista-produtos">
+        <?php foreach($produtos as $produto) { ?>
+            <li class="item-produto">
+                <a href="<?= $produto["link"]; ?>">
+                    <div class="info-produto">
+                        <img src="<?= $produto["img"]; ?>" alt="<?= $produto["nome"]; ?>">
+                        <h2><?= $produto["nome"]; ?> - <span><?= $produto["preco"]; ?></span></h2>
+                    </div>
+
+                    <div class="overlay-produto">
+                        <span class="btn-link">Ver mais</span>
+                    </div>
+                </a>
+            </li>
+        <?php } ?>
+    </ul>
+<?php }

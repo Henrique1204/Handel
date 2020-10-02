@@ -54,7 +54,7 @@
     font-weight: 300;
 }
 
-.slide-link {
+.btn-link {
     max-width: 200px;
     padding: 15px;
     color: #000;
@@ -64,7 +64,7 @@
     align-items: center;
 }
 
-.slide-link::after {
+.btn-link::after {
     content: "";
     width: 18px;
     height: 18px;
