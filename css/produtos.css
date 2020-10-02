@@ -38,3 +38,9 @@
     margin: auto;
 }
 
+@media (max-width: 800px) {
+    .lista-produtos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}

@@ -38,10 +38,31 @@
         'order' => 'DESC'
     ]);
 
+    $home_id = get_the_ID();
+    $categoria_esquerda = get_post_meta($home_id, 'categoria_esquerda', true);
+    $categoria_direita = get_post_meta($home_id, 'categoria_direita', true);
+
+    function formatar_termo($categoria) {
+        $termo = get_term_by('slug', $categoria, 'product_cat');
+        $termo_id = $termo->term_id;
+        $img_id = get_term_meta($termo_id, 'thumbnail_id', true);
+
+        return [
+            "id" => $termo_id,
+            "nome" => $termo->name,
+            "link" => get_term_link($termo_id, "product_cat"),
+            'img' => wp_get_attachment_image_src($img_id, 'slide')[0]
+        ];
+    }
+
     $dados = [
         'slide' => formatar_produtos($produtos_slide, 'slide'),
         'lancamentos' => formatar_produtos($novos_produtos, 'medium'),
-        'vendas' => formatar_produtos($produtos_vendas, 'medium')
+        'vendas' => formatar_produtos($produtos_vendas, 'medium'),
+        'categorias' => [
+            'esquerda' => formatar_termo($categoria_esquerda),
+            'direita' => formatar_termo($categoria_direita)
+        ]
     ];
 ?>
 </pre>
@@ -72,6 +93,15 @@
         <h1 class='subtitulo'>Lançamento</h1>
 
         <?php handel_listar_produtos($dados['lancamentos']); ?>
+    </section>
+
+    <section class="categorias-home">
+        <?php foreach($dados['categorias'] as $categoria) { ?>
+            <a href="<?= $categoria['link']; ?>">
+                <img src="<?= $categoria['img']; ?>" alt="<? $categoria['nome']; ?>">
+                <span class="btn-link"><?= $categoria['nome']; ?></span>
+            </a>
+        <?php } ?>
     </section>
 
     <section class='container'>

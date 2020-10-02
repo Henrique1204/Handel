@@ -71,3 +71,51 @@
     display: block;
     background: url("../img/icons/arrow.svg") no-repeat center;
 }
+
+/* Categorias */
+.categorias-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.categorias-home a {
+    display: grid;
+}
+
+.categorias-home > a:nth-child(1) {
+    border-top: 10px solid;
+}
+
+.categorias-home > a:nth-child(2) {
+    border-bottom: 10px solid;
+}
+
+.categorias-home img {
+    grid-area: 1/1;
+    justify-self: end;
+    align-self: end;
+}
+
+.categorias-home span {
+    width: 160px;
+    margin: 0 40px 40px 0;
+    grid-area: 1/1;
+    justify-self: end;
+    align-self: end;
+}
+
+.categorias-home > a:nth-child(2) span {
+    margin: 0 0 30px 40px;
+    justify-self: start;
+}
+
+@media (max-width: 800px) {
+    .slide-item {
+        grid-template-columns: 1fr;
+    }
+
+    .slide-info {
+        margin-top: 20px;
+    }
+}

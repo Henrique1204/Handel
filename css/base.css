@@ -30,6 +30,7 @@ img {
 
 .container {
     max-width: 1000px;
+    padding: 0 20px;
     margin: 60px auto;
 }
 
