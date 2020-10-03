@@ -10,21 +10,6 @@
         'tag' => ['slide']
     ]);
 
-    function formatar_produtos($produtos, $tamanho_img) {
-        $produtos_finais = [];
-
-        foreach($produtos as $produto) {
-            $produtos_finais[] = [
-                'nome' => $produto->get_name(),
-                'preco' => $produto->get_price_html(),
-                'link' => $produto->get_permalink(),
-                'img' => wp_get_attachment_image_src($produto->get_image_id(), $tamanho_img)[0]
-            ];
-        }
-
-        return $produtos_finais;
-    }
-
     $novos_produtos = wc_get_products([
         'limit' => 9,
         'orderby' => 'date',
