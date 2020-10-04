@@ -27,6 +27,22 @@ function handel_custom_image() {
 
 add_action('after_setup_theme', 'handel_custom_image');
 
+// Filtrar classes
+function remover_classes_body($classes) {
+    $classe_woo = array_search('woocommerce', $classes);
+    $classe_woo_page = array_search('woocommerce-page', $classes);
+
+    $pagina = in_array('archive', $classes) || in_array('product-template-default', $classes);
+
+    if ($classe_woo && $classe_woo_page && $pagina) {
+        unset($classes[$classe_woo]);
+        unset($classes[$classe_woo_page]);
+    }
+
+    return $classes;
+}
+
+add_filter('body_class', 'remover_classes_body');
 
 // Filtro pra limitar número de produtos mostrados em loja
 function handel_loop_shop_per_page() {

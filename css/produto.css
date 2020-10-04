@@ -1,0 +1,117 @@
+.produto {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.galeria-produto {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+}
+
+.lista-galeria-produto img{
+    margin-bottom: 20px;
+}
+
+.detalhe-produto small {
+    margin-bottom: 10px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.detalhe-produto h1 {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.detalhe-produto h2 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.detalhe-produto .preco-produto {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.detalhe-produto .button {
+    min-width: 200px;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    margin: 20px 0 40px;
+    font-size: 1rem;
+    color: #FFF;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.detalhe-produto .button::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url('../img/icons/add.svg') no-repeat center;
+    display: block;
+    transition: 0.3s;
+}
+
+.detalhe-produto .button:hover::after {
+    transform: rotate(180deg);
+}
+
+.detalhe-produto .button.disabled {
+    opacity: 0.5;
+    cursor: initial;
+}
+
+.detalhe-produto .variations tr {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detalhe-produto .variations select {
+    padding: 4px 2px;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.detalhe-produto .reset_variations, .detalhe-produto .quantity {
+    display: none!important;
+}
+
+.detalhe-produto .stock {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 800px) {
+    .produto {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-produto {
+        grid-row: 2;
+    }
+
+    .detalhe-produto h1 {
+        margin-bottom: 20px;
+    }
+
+    .galeria-produto {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-galeria-produto {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}

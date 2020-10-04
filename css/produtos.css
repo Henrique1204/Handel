@@ -47,7 +47,7 @@
 }
 
 .woocommerce-breadcrumb {
-    padding-bottom: 20px!important;
+    padding-bottom: 20px;
     border-bottom: 2px solid #000;
 }
 
@@ -161,7 +161,7 @@
 .woocommerce-ordering {
     margin-bottom: 20px;
     margin-left: auto;
-    float: none!important;
+    float: none;
 }
 
 .woocommerce-ordering select {
