@@ -34,8 +34,29 @@ img {
     margin: 60px auto;
 }
 
+.container-index {
+    margin: 30px auto;
+}
+
+.quebra {
+    padding: 20px;
+    background-color: #F8F8F8;
+}
+
 .hidden {
     display: none;
+}
+
+.titulo {
+    padding: 30px 0;
+    margin-bottom: 20px;
+    font-size: 1.125rem;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    color: #FFF;
+    background-color: #111;
 }
 
 .subtitulo {

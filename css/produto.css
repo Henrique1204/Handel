@@ -92,6 +92,10 @@
     margin-bottom: 10px;
 }
 
+.notificacao {
+    margin: 20px auto;
+}
+
 @media (max-width: 800px) {
     .produto {
         grid-template-columns: 1fr;

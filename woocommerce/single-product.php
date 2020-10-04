@@ -74,9 +74,9 @@
     $relacionados = formatar_produtos($produtos_relacionados);
 ?>
 
-<section class="relacionados">
+<section class="quebra">
     <div class="container">
-        <h1>Relacionados</h2>
+        <h1 class="subtitulo">Relacionados</h2>
 
         <?php handel_listar_produtos($relacionados); ?>
     </div>
