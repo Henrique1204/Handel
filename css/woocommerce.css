@@ -73,3 +73,65 @@
 .woocommerce table.shop_table {
     border-radius: 0px;
 }
+
+/* Checkout */
+.woocommerce-form-coupon-toggle {
+    display: none;
+}
+
+.woocommerce .checkout h3 {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #FFF;
+    background-color: #111;
+}
+
+.woocommerce #order_review_heading {
+    margin-top: 20px;
+}
+
+.woocommerce #payment, .woocommerce #payment div.payment_box {
+    font-size: 1rem;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.08);
+}
+
+.woocommerce #payment #place_order {
+    padding: 15px 30px;
+    margin-top: 20px;
+    font-size: 1.25rem;
+    background-color: #06B!important;
+    float: none!important;
+}
+
+.woocommerce #payment #place_order:hover {
+    background-color: #18E!important;
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+    max-width: 600px;
+    padding: 0;
+    border: none;
+    margin: 10px 0;
+}
+
+/* PagSeguro */
+.woocommerce #pagseguro-payment-form {
+    border: none;
+}
+
+.woocommerce #payment div.payment_box ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 800px) {
+    .woocommerce .woocommerce-additional-fields h3, .woocommerce #order_review_heading {
+        margin-top: 30px;
+    }
+}
