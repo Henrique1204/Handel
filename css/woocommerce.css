@@ -130,8 +130,66 @@
     color: rgba(0, 0, 0, 0.4);
 }
 
+/* Minhca conta */
+.woocommerce-account h2 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+}
+
+.woocommerce-account.logged-in .woocommerce{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+}
+
+.woocommerce-account.logged-in .woocommerce::before,
+.woocommerce-account.logged-in .woocommerce::after {
+    display: none;
+}
+
+.woocommerce-account.logged-in .woocommerce-MyAccount-navigation,
+.woocommerce-account.logged-in .woocommerce-MyAccount-content {
+    width: auto;
+    float: none;
+}
+
+/* Estilo do side menu */
+.woocommerce-MyAccount-navigation ul {
+    color: #FFF;
+    background-color: #111;
+}
+
+.woocommerce-MyAccount-navigation a {
+    padding: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+    text-decoration: none;
+    display: block;
+}
+
+.woocommerce-MyAccount-navigation a:hover,
+.woocommerce-MyAccount-navigation .is-active a {
+    background-color: orangered;
+}
+
+.woocommerce-MyAccount-content p {
+    margin-bottom: 1rem;
+}
+
+.woocommerce-MyAccount-content button {
+    margin-top: 15px!important;
+}
+
+.woocommerce .woocommerce-customer-details address {
+    border-width: 1px;
+    border-radius: 0px;
+}
+
 @media (max-width: 800px) {
     .woocommerce .woocommerce-additional-fields h3, .woocommerce #order_review_heading {
         margin-top: 30px;
+    }
+
+    .woocommerce-account.logged-in .woocommerce{
+        grid-template-columns: 1fr;
     }
 }
