@@ -184,6 +184,49 @@
     border-radius: 0px;
 }
 
+/* Pedido finalizado */
+.woocommerce-order-received h2 {
+    margin: 10px 0;
+    font-size: 1.25rem;
+}
+
+.woocommerce-order-received .woocommerce-thankyou-order-received {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    color: #FFF;
+    background-color: #06B;
+}
+
+.woocommerce-order-received ul.order_details {
+    padding: 15px;
+    margin-bottom: 30px;
+    background-color: #EEE;
+}
+
+.woocommerce-order-received ul.order_details li{
+    margin: 10px;
+}
+
+.woocommerce-order-received ul.order_details li strong{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.woocommerce-order-received ul.order_details + p{
+    margin-bottom: 30px;
+}
+
+.woocommerce-page .woocommerce-message .button {
+    font-weight: normal;
+    color: #FFF;
+    background-color: #06B;
+}
+
+.woocommerce-page .woocommerce-message .button:hover {
+    background-color: #18E;
+}
+
 @media (max-width: 800px) {
     .woocommerce .woocommerce-additional-fields h3, .woocommerce #order_review_heading {
         margin-top: 30px;

@@ -53,3 +53,4 @@ add_filter('loop_shop_per_page', 'handel_loop_shop_per_page');
 
 include(get_template_directory().'/inc/produtos.php');
 include(get_template_directory().'/inc/handel_menu_personalizado.php');
+include(get_template_directory().'/inc/checkout_customizado.php');

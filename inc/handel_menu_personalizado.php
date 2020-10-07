@@ -25,5 +25,5 @@ function handel_certificados() {
 
 add_action('woocommerce_account_certificados_endpoint', 'handel_certificados');
 
-
-flush_rewrite_rules($hard);
+// Recarrega os endpoints, usar só uma vez
+// flush_rewrite_rules($hard);
