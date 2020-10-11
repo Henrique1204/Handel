@@ -227,6 +227,10 @@
     background-color: #18E;
 }
 
+.woocommerce-orders-table__cell-order-actions a {
+    margin: 5px!important;
+}
+
 @media (max-width: 800px) {
     .woocommerce .woocommerce-additional-fields h3, .woocommerce #order_review_heading {
         margin-top: 30px;
